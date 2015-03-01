@@ -1,0 +1,26 @@
+{
+  "name": "konekobox/chisai",
+  "description": "A url shotener service",
+  "minimum-stability": "dev",
+  "license": "mit",
+  "authors": [
+    {
+      "name": "Christopher Schmitt",
+      "email": "cs@konekobox.de"
+    }
+  ],
+  "require": {
+    "slim/slim": "2.5.0",
+    "nesbot/carbon": "1.14.0",
+    "j4mie/paris": "v1.5.4",
+    "vlucas/valitron": "1.1.7",
+    "slim/views": "0.1.3",
+    "twig/twig": "*",
+    "twig/extensions": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "konekobox\\chisai\\": "app"
+    }
+  }
+}
