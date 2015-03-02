@@ -3,6 +3,7 @@
 require '../vendor/autoload.php';
 
 $app = new \SlimController\Slim([
+    'debug' => true,
     'controller.class_prefix'    => '\\konekobox\\chisai\\controllers',
     'controller.method_suffix'   => 'Action',
     'view' => new \Slim\Views\Twig(),
