@@ -5,11 +5,13 @@ $app->addRoutes([
     '/' => [
         'get' => [
             'ShorturlController:index',
-            function () {}
+            function () {
+            }
         ],
         'post' => [
             'ShorturlController:create',
-            function () {}
+            function () {
+            }
         ]
     ],
     '/:short(/)' => 'ShorturlController:redirect',

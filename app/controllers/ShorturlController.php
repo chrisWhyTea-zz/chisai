@@ -6,7 +6,8 @@ namespace konekobox\chisai\controllers;
 use konekobox\chisai\repositories\ShorturlRepository;
 use SlimController\SlimController;
 
-class ShorturlController extends SlimController {
+class ShorturlController extends SlimController
+{
 
     private $Shorturl;
 
@@ -18,7 +19,8 @@ class ShorturlController extends SlimController {
     }
 
 
-    public function indexAction(){
+    public function indexAction()
+    {
         $this->render('index.twig');
     }
 
@@ -28,13 +30,15 @@ class ShorturlController extends SlimController {
         $this->app->redirect("/$shorttag/details");
     }
 
-    public function redirectAction($shorttag){
+    public function redirectAction($shorttag)
+    {
         $shorturl = $this->Shorturl->getByShort($shorttag);
         $this->Shorturl->statisticVisit($shorturl);
         $this->app->redirect($shorturl->url);
     }
 
-    public function detailsAction($shorttag){
+    public function detailsAction($shorttag)
+    {
         $shorturlDetails = $this->Shorturl->getByShort($shorttag);
 
         $this->render('details.twig', [
@@ -45,5 +49,5 @@ class ShorturlController extends SlimController {
             "short" => $shorturlDetails->short,
         ]);
     }
-    
+
 }

@@ -4,22 +4,22 @@
     <div class="small-4 large-1 columns">
         <div class="panel"><h5>Url:</h5>
 
-            <p><a href="{{url}}">{{url}}</a></p></div>
+            <p><a href="{{ url }}">{{ url }}</a></p></div>
     </div>
     <div class="small-4 large-1 columns">
         <div class="panel"><h5>Created at:</h5>
 
-            <p>{{created_at}}</p></div>
+            <p>{{ created_at }}</p></div>
     </div>
     <div class="small-4 large-1 columns">
         <div class="panel"><h5>Visitors:</h5>
 
-            <p>{{visitors}}</p></div>
+            <p>{{ visitors }}</p></div>
     </div>
     <div class="small-4 large-1 columns">
         <div class="panel"><h5>Last visited:</h5>
 
-            <p>{{last_visited_at|default('-')}}</p></div>
+            <p>{{ last_visited_at|default('-') }}</p></div>
     </div>
 </div>
 <br/>
@@ -27,7 +27,7 @@
     <div class="small-2 large-2 small-centered large-centered columns">
         <div class="row collapse">
             <div class="small-3 columns">
-                <input type="url" name="url" autofocus value="{{baseUrl()}}/{{short}}">
+                <input type="url" name="url" autofocus value="{{ baseUrl() }}/{{ short }}">
             </div>
             <div class="small-1 columns">
                 <a class="button postfix">Copy</a>
