@@ -12,14 +12,6 @@ ORM::configure('password', DB_PASSWORD);
 Model::$auto_prefix_models = "\\konekobox\\chisai\\models\\";
 
 /**
- * Add Repositorys as Singletons (UGLY!) @Todo find replace for Singletons!
- */
-$app->container->singleton('shorturlRepo', function () {
-    return new \konekobox\chisai\repositories\ShorturlRepository();
-});
-
-
-/**
  * Add Twig Extensions
  */
 $view = $app->view();
