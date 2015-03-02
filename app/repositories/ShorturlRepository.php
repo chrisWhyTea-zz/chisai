@@ -4,20 +4,35 @@ namespace konekobox\chisai\repositories;
 
 use Carbon\Carbon;
 
+/**
+ * Class ShorturlRepository
+ * @package konekobox\chisai\repositories
+ */
 class ShorturlRepository implements ShorturlRepositoryInterface
 {
 
+    /**
+     * @param $shorttag
+     * @return mixed
+     */
     function getByShort($shorttag)
     {
         return \Model::factory('Shorturl')->findOne($shorttag);
     }
 
+    /**
+     * @return mixed
+     */
     function getAll()
     {
         return \Model::factory('Shorturl')->findMany();
 
     }
 
+    /**
+     * @param $url
+     * @return string
+     */
     function create($url)
     {
         // TODO: Add validation for the URL
@@ -30,11 +45,17 @@ class ShorturlRepository implements ShorturlRepositoryInterface
         return $shorturl->shorttag;
     }
 
+    /**
+     * @param \Model $shortM
+     */
     function delete(\Model $shortM)
     {
         // TODO: Implement delete() method.
     }
 
+    /**
+     * @param \Model $shorturl
+     */
     function statisticVisit(\Model $shorturl)
     {
         $shorturl->visitors++;
