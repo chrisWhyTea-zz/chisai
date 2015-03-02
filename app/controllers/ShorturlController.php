@@ -34,7 +34,7 @@ class ShorturlController extends SlimController
      */
     public function indexAction()
     {
-        $this->render('index.twig');
+        $this->render('shorturl/index.twig');
     }
 
     /**
@@ -63,7 +63,7 @@ class ShorturlController extends SlimController
     {
         $shorturlDetails = $this->Shorturl->getByShort($shorttag);
 
-        $this->render('details.twig', [
+        $this->render('shorturl/details.twig', [
             "url" => $shorturlDetails->url,
             "visitors" => $shorturlDetails->visitors,
             "created_at" => $shorturlDetails->created_at,
