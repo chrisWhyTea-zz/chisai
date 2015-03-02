@@ -12,6 +12,6 @@ $app->addRoutes([
             function () {}
         ]
     ],
-    '/:short' => 'ShorturlController:redirect',
-    '/:short/details' => 'ShorturlController:details'
+    '/:short(/)' => 'ShorturlController:redirect',
+    '/:short/details(/)' => 'ShorturlController:details'
 ]);
