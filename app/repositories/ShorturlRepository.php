@@ -7,9 +7,9 @@ use Carbon\Carbon;
 class ShorturlRepository implements ShorturlRepositoryInterface
 {
 
-    function getByShort($short)
+    function getByShort($shorttag)
     {
-        return \Model::factory('Shorturl')->findOne($short);
+        return \Model::factory('Shorturl')->findOne($shorttag);
     }
 
     function getAll()
@@ -24,10 +24,10 @@ class ShorturlRepository implements ShorturlRepositoryInterface
         $now = Carbon::now();
         $shorturl = \Model::factory('Shorturl')->create();
         $shorturl->url = $url;
-        $shorturl->short = $this->uuid();
+        $shorturl->shorttag = $this->uuid();
         $shorturl->created_at = $now;
         $shorturl->save();
-        return $shorturl->short;
+        return $shorturl->shorttag;
     }
 
     function delete(\Model $shortM)
