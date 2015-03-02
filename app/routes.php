@@ -1,6 +1,5 @@
 <?php
 
-
 $app->addRoutes([
     '/' => [
         'get' => [
@@ -13,7 +12,11 @@ $app->addRoutes([
             function () {
             }
         ]
-    ],
-    '/:short(/)' => 'ShorturlController:redirect',
-    '/:short/details(/)' => 'ShorturlController:details'
+    ]
 ]);
+$app->group('/:short', function () use ($app) {
+    $app->addRoutes([
+        '/' => 'ShorturlController:redirect',
+        '/details(/)' => 'ShorturlController:details'
+    ]);
+});
