@@ -16,7 +16,8 @@
     "vlucas/valitron": "1.1.7",
     "slim/views": "0.1.3",
     "twig/twig": "*",
-    "twig/extensions": "*"
+    "twig/extensions": "*",
+    "slimcontroller/slimcontroller": "dev-master"
   },
   "autoload": {
     "psr-4": {
