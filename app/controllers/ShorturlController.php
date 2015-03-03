@@ -51,7 +51,7 @@ class ShorturlController extends SlimController
      */
     public function redirectAction($shorttag)
     {
-        $shorturl = $this->Shorturl->getByShort($shorttag);
+        $shorturl = $this->Shorturl->getByShorttag($shorttag);
         $this->Shorturl->statisticVisit($shorturl);
         $this->app->redirect($shorturl->url);
     }
@@ -61,15 +61,9 @@ class ShorturlController extends SlimController
      */
     public function detailsAction($shorttag)
     {
-        $shorturlDetails = $this->Shorturl->getByShort($shorttag);
+        $shorturlDetails = $this->Shorturl->getByShorttag($shorttag)->as_array();
 
-        $this->render('shorturl/details.twig', [
-            "url" => $shorturlDetails->url,
-            "visitors" => $shorturlDetails->visitors,
-            "created_at" => $shorturlDetails->created_at,
-            "last_visited_at" => $shorturlDetails->last_visited_at,
-            "short" => $shorturlDetails->short,
-        ]);
+        $this->render('shorturl/details.twig', $shorturlDetails);
     }
 
 }

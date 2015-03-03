@@ -15,7 +15,7 @@ class ShorturlRepository implements ShorturlRepositoryInterface
      * @param $shorttag
      * @return mixed
      */
-    function getByShort($shorttag)
+    function getByShorttag($shorttag)
     {
         return \Model::factory('Shorturl')->findOne($shorttag);
     }
@@ -46,9 +46,9 @@ class ShorturlRepository implements ShorturlRepositoryInterface
     }
 
     /**
-     * @param \Model $shortM
+     * @param \Model $shorturl
      */
-    function delete(\Model $shortM)
+    function delete(\Model $shorturl)
     {
         // TODO: Implement delete() method.
     }

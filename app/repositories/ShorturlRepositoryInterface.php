@@ -6,7 +6,7 @@ namespace konekobox\chisai\repositories;
 
 interface ShorturlRepositoryInterface
 {
-    function getByShort($short);
+    function getByShorttag($shorttag);
 
     function getAll();
 
