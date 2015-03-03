@@ -4,6 +4,6 @@ CREATE TABLE `shorturl` (
   `created_at` datetime NOT NULL,
   `last_visited_at` datetime DEFAULT NULL,
   `visitors` int(11) DEFAULT 0 NOT NULL,
-  PRIMARY KEY (`short`),
-  UNIQUE KEY `unique_short` (`short`)
+  PRIMARY KEY (`shorttag`),
+  UNIQUE KEY `unique_shorttag` (`shorttag`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
