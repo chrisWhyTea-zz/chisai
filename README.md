@@ -16,7 +16,7 @@ Chisai (小さい) is a URL Shortener that is still in development...
 6. Inside your browser switch to "http://localhost:8000"
 7. Have Fun
 
-## How to install on local machine?
+## How to install on productive machine?
 1. No just... no!!
 2. Really don't do it! A stable version will be released someday for that purpose...
 
